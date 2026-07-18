@@ -22,7 +22,7 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-[#151515] overflow-hidden">
+    <section id="services" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Subtle background overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0B0B0B] via-transparent to-[#0B0B0B] pointer-events-none" />
 

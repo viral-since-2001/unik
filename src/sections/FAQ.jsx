@@ -11,7 +11,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-24 bg-[#151515] overflow-hidden">
+    <section id="faq" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-transparent to-[#0B0B0B] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[30vw] h-[30vw] rounded-full bg-[#C8A96A]/3 blur-[120px] pointer-events-none" />

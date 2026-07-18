@@ -7,6 +7,7 @@ import afterClean from '../assets/images/after_clean.jpg';
 export default function BeforeAfter() {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const [containerWidth, setContainerWidth] = useState(0);
   const containerRef = useRef(null);
 
   const handleMove = (clientX) => {
@@ -42,8 +43,26 @@ export default function BeforeAfter() {
     };
   }, [isDragging]);
 
+  // Track container width dynamically to prevent image compression
+  useEffect(() => {
+    if (!containerRef.current) return;
+    
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+    
+    resizeObserver.observe(containerRef.current);
+    
+    // Set initial size
+    setContainerWidth(containerRef.current.getBoundingClientRect().width);
+    
+    return () => resizeObserver.disconnect();
+  }, []);
+
   return (
-    <section id="before-after" className="relative py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="before-after" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute top-1/2 left-10 w-[30vw] h-[30vw] rounded-full bg-[#C8A96A]/5 blur-[100px] pointer-events-none" />
 
@@ -91,7 +110,7 @@ export default function BeforeAfter() {
               alt="Before paint correction"
               // Keep the image width fixed to container width so it doesn't compress
               className="absolute top-0 left-0 w-full h-full object-cover max-w-none pointer-events-none"
-              style={{ width: containerRef.current?.getBoundingClientRect().width }}
+              style={{ width: containerWidth }}
             />
             <div className="absolute left-6 top-6 bg-[#C8A96A] px-3.5 py-1.5 rounded-full text-[10px] text-[#0B0B0B] tracking-[2px] uppercase z-20 font-bold font-inter shadow-[0_4px_10px_rgba(200,169,106,0.3)]">
               Before: Swirl Marks

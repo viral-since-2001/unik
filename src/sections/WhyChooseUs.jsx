@@ -32,7 +32,7 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="relative py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="why-choose-us" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-white/[0.01] blur-[120px] pointer-events-none" />
 

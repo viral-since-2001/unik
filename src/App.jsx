@@ -6,6 +6,7 @@ import Loader from './components/Loader';
 import CustomCursor from './components/CustomCursor';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppCTA from './components/WhatsAppCTA';
+import StickyMobileBook from './components/StickyMobileBook';
 import Navbar from './components/Navbar';
 
 // Page Sections
@@ -91,6 +92,7 @@ export default function App() {
           {/* Floating UI Elements */}
           <ScrollToTop />
           <WhatsAppCTA />
+          <StickyMobileBook />
 
         </div>
       )}

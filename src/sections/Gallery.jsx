@@ -14,7 +14,7 @@ export default function Gallery() {
     : galleryItems.filter(item => item.category === filter);
 
   return (
-    <section id="gallery" className="relative py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="gallery" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute bottom-1/4 right-1/4 w-[40vw] h-[40vw] rounded-full bg-white/[0.01] blur-[150px] pointer-events-none" />
 

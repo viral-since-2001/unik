@@ -13,7 +13,7 @@ const cardVariants = {
 
 export default function Pricing() {
   return (
-    <section id="packages" className="relative py-24 bg-[#151515] overflow-hidden">
+    <section id="packages" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-transparent to-[#0B0B0B] pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-[#C8A96A]/3 blur-[150px] pointer-events-none" />

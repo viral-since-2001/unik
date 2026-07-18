@@ -21,7 +21,7 @@ const stepVariants = {
 
 export default function Process() {
   return (
-    <section id="process" className="relative py-24 bg-[#151515] overflow-hidden">
+    <section id="process" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-transparent to-[#0B0B0B] pointer-events-none" />
 
@@ -77,22 +77,15 @@ export default function Process() {
                   {/* Left Column (or Right depending on even/odd) */}
                   <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-8 text-left md:text-right">
                     {/* Step Numeric Monogram */}
-                    <div className={`flex items-baseline gap-2 mb-2 ${
-                      isEven ? 'md:justify-start' : 'md:justify-end'
+                    <div className={`flex items-baseline gap-2 mb-2 justify-start ${
+                      isEven ? 'md:justify-start' : 'md:flex-row-reverse md:justify-end'
                     }`}>
-                      {!isEven && (
-                        <span className="font-playfair text-xl md:text-2xl font-bold text-[#C8A96A] text-glow-gold">
-                          {step.step}
-                        </span>
-                      )}
-                      <h3 className="font-playfair text-lg sm:text-xl font-semibold text-white tracking-wide">
+                      <h3 className="font-playfair text-lg sm:text-xl font-semibold text-white tracking-wide order-last md:order-first">
                         {step.title}
                       </h3>
-                      {isEven && (
-                        <span className="font-playfair text-xl md:text-2xl font-bold text-[#C8A96A] text-glow-gold">
-                          {step.step}
-                        </span>
-                      )}
+                      <span className="font-playfair text-xl md:text-2xl font-bold text-[#C8A96A] text-glow-gold order-first md:order-last">
+                        {step.step}
+                      </span>
                     </div>
 
                     <p className={`font-inter text-xs sm:text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide ${

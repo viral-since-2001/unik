@@ -43,7 +43,7 @@ export default function Testimonials() {
   const activeTestimonial = testimonials[activeIndex];
 
   return (
-    <section id="reviews" className="relative py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="reviews" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
       {/* Background soft reflections */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-white/[0.01] blur-[150px] pointer-events-none" />
 
