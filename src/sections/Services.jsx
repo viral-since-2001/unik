@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock, Tag, ArrowRight } from 'lucide-react';
-import { services } from '../data/siteData';
+import { services, servicesHeader } from '../data/siteData';
 
 const containerVariants = {
   hidden: {},
@@ -32,14 +32,14 @@ export default function Services() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
           <div className="text-left max-w-xl">
             <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-              Bespoke Detailing Services
+              {servicesHeader.subtitle}
             </span>
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3">
-              Unrivaled Care For All Surfaces
+              {servicesHeader.title}
             </h2>
           </div>
           <p className="font-inter text-sm text-[#B8B8B8] font-light max-w-md text-left lg:text-right leading-relaxed tracking-wide">
-            Explore our curated menu of detailing, correction, and surface protection therapies, engineered to produce a concour-level presentation.
+            {servicesHeader.description}
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, Star } from 'lucide-react';
-import { pricingPackages } from '../data/siteData';
+import { pricingPackages, pricingHeader } from '../data/siteData';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -23,13 +23,13 @@ export default function Pricing() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Pricing Guides
+            {pricingHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Luxury Detailing Packages
+            {pricingHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Select a tailored combination of correction and protection treatments crafted to restore and protect your automobile.
+            {pricingHeader.description}
           </p>
         </div>
 

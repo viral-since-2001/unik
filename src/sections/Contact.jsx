@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Calendar, CheckCircle2 } from 'lucide-react';
+import { contactInfo, contactHeader } from '../data/siteData';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -54,13 +55,13 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Reservation Desk
+            {contactHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Book your slot
+            {contactHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Request an appointment at our premium garage. Our concierge team will review and confirm your details.
+            {contactHeader.description}
           </p>
         </div>
 
@@ -80,7 +81,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-inter text-xs font-semibold text-[#B8B8B8] tracking-wider uppercase">Call Us</h4>
-                  <p className="font-inter text-sm text-white mt-0.5 font-medium">+1 (234) 567-890</p>
+                  <p className="font-inter text-sm text-white mt-0.5 font-medium">{contactInfo.phone}</p>
                 </div>
               </div>
 
@@ -91,7 +92,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-inter text-xs font-semibold text-[#B8B8B8] tracking-wider uppercase">Email</h4>
-                  <p className="font-inter text-sm text-white mt-0.5 font-medium">concierge@unikcarcare.com</p>
+                  <p className="font-inter text-sm text-white mt-0.5 font-medium">{contactInfo.email}</p>
                 </div>
               </div>
 
@@ -102,9 +103,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-inter text-xs font-semibold text-[#B8B8B8] tracking-wider uppercase">Studio Address</h4>
-                  <p className="font-inter text-sm text-white mt-0.5 font-light leading-relaxed">
-                    100 Luxury Avenue, Suite A,<br />
-                    Beverly Hills, CA 90210
+                  <p className="font-inter text-sm text-white mt-0.5 font-light leading-relaxed whitespace-pre-line">
+                    {contactInfo.address}
                   </p>
                 </div>
               </div>
@@ -116,9 +116,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-inter text-xs font-semibold text-[#B8B8B8] tracking-wider uppercase">Business Hours</h4>
-                  <p className="font-inter text-sm text-white mt-0.5 font-light">
-                    Monday - Saturday: 8:00 AM - 6:00 PM<br />
-                    Sunday: Closed (By Appointment Only)
+                  <p className="font-inter text-sm text-white mt-0.5 font-light whitespace-pre-line">
+                    {contactInfo.hours}
                   </p>
                 </div>
               </div>
@@ -128,7 +127,7 @@ export default function Contact() {
             <div className="w-full h-64 rounded-2xl overflow-hidden border border-white/5 shadow-inner">
               <iframe
                 title="Unik Car Care Studio Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.7792619472395!2d-118.40428522345091!3d34.07512187314736!2m3!1f0!2f0!3f0!3m2!1i1024!2i769!4f13.1!3m3!1m2!1s0x80c2bc04ce9df87b%3A0xe10ee071239c0d38!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src={contactInfo.mapEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) grayscale(80%)' }}

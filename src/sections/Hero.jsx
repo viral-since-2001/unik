@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Star, ChevronDown, Calendar, Compass } from 'lucide-react';
 import heroBg from '../assets/images/hero_bg.jpg';
+import { heroContent } from '../data/siteData';
 
 export default function Hero() {
   const [offsetY, setOffsetY] = useState(0);
@@ -26,14 +27,14 @@ export default function Hero() {
       />
 
       {/* Premium Cinematic Overlays */}
-      <div className="absolute inset-0 bg-[#0B0B0B]/60" /> {/* Dark shading */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent" /> {/* Bottom vignette */}
+      <div className="absolute inset-0 bg-[#0B0B0B]/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent" />
       
       {/* Radial Gold Lighting Spotlights */}
       <div className="absolute top-1/4 left-1/4 w-[30vw] h-[30vw] rounded-full bg-[#C8A96A]/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-[40vw] h-[40vw] rounded-full bg-white/2 blur-[150px] pointer-events-none" />
 
-      {/* Floating Animated Fog/Smoke Elements (Tailwind + Framer Motion) */}
+      {/* Floating Animated Fog/Smoke Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
         <motion.div
           animate={{
@@ -74,7 +75,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8A96A] animate-pulse"></span>
             <span className="font-inter text-[10px] tracking-[3px] text-[#C8A96A] uppercase font-semibold">
-              Premium Detailing Studio
+              {heroContent.badge}
             </span>
           </motion.div>
 
@@ -82,10 +83,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6"
+            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6 whitespace-pre-line"
           >
-            Premium Car <br className="hidden md:block"/>
-            <span className="text-[#C8A96A] text-glow-gold">Detailing & SPA</span>
+            {heroContent.title}
           </motion.h1>
 
           <motion.p
@@ -94,7 +94,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="font-inter text-[#B8B8B8] text-sm sm:text-base md:text-lg max-w-xl font-light leading-relaxed tracking-wide mb-10"
           >
-            Bring your car back to showroom perfection with world-class paint correction, multi-year hydrophobic ceramic coatings, and bespoke interior restoration.
+            {heroContent.subtitle}
           </motion.p>
 
           {/* Action Buttons */}
@@ -109,14 +109,14 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 bg-[#C8A96A] hover:bg-[#D6B87C] text-[#0B0B0B] font-inter font-semibold text-xs tracking-widest uppercase px-8 py-4.5 rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(200,169,106,0.15)] hover:shadow-[0_15px_30px_rgba(200,169,106,0.3)] hover:-translate-y-0.5"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book Appointment</span>
+              <span>{heroContent.primaryBtnText}</span>
             </a>
             <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 border border-white/10 hover:border-[#C8A96A]/50 bg-white/5 hover:bg-white/10 text-white font-inter font-semibold text-xs tracking-widest uppercase px-8 py-4.5 rounded-full transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
             >
               <Compass className="w-4 h-4" />
-              <span>Explore Services</span>
+              <span>{heroContent.secondaryBtnText}</span>
             </a>
           </motion.div>
         </div>
@@ -127,7 +127,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full max-w-sm glass-card p-8 rounded-2xl relative border border-white/5 overflow-hidden flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+            className="w-full max-w-sm glass-card p-6 sm:p-8 rounded-2xl relative border border-white/5 overflow-hidden flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           >
             {/* Soft inner gold reflection */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#C8A96A]/10 blur-2xl rounded-full" />
@@ -140,10 +140,10 @@ export default function Hero() {
                 ))}
               </div>
               <p className="font-playfair text-xl font-semibold text-white mt-1">
-                500+ Happy Customers
+                {heroContent.ratingTitle}
               </p>
               <p className="font-inter text-xs text-[#B8B8B8] tracking-wide font-light">
-                Providing standard-setting automotive detailing and premium surface preservation.
+                {heroContent.ratingSubtitle}
               </p>
             </div>
 
@@ -152,12 +152,12 @@ export default function Hero() {
             {/* Core Stats Bulletins */}
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col">
-                <span className="font-playfair text-2xl font-semibold text-[#C8A96A]">9H Hardness</span>
-                <span className="font-inter text-[10px] uppercase tracking-wider text-[#B8B8B8] mt-0.5">Premium Products</span>
+                <span className="font-playfair text-2xl font-semibold text-[#C8A96A]">{heroContent.stats.leftNumber}</span>
+                <span className="font-inter text-[10px] uppercase tracking-wider text-[#B8B8B8] mt-0.5">{heroContent.stats.leftLabel}</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair text-2xl font-semibold text-[#C8A96A]">100% Elite</span>
-                <span className="font-inter text-[10px] uppercase tracking-wider text-[#B8B8B8] mt-0.5">Certified Experts</span>
+                <span className="font-playfair text-2xl font-semibold text-[#C8A96A]">{heroContent.stats.rightNumber}</span>
+                <span className="font-inter text-[10px] uppercase tracking-wider text-[#B8B8B8] mt-0.5">{heroContent.stats.rightLabel}</span>
               </div>
             </div>
           </motion.div>
@@ -176,7 +176,7 @@ export default function Hero() {
         }}
       >
         <span className="font-inter text-[9px] uppercase tracking-[4px] text-[#B8B8B8] font-light">
-          Scroll Down
+          {heroContent.scrollDownText}
         </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Award, Leaf, Clock, Gem, Heart } from 'lucide-react';
-import { whyChooseUs } from '../data/siteData';
+import { whyChooseUs, whyChooseUsHeader } from '../data/siteData';
 
 // Map icon string names to Lucide icon components
 const iconMap = {
@@ -41,13 +41,13 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Uncompromising Excellence
+            {whyChooseUsHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Why Discerning Owners Choose Us
+            {whyChooseUsHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            We merge advanced chemical engineering with artisan craftsmanship to preserve your vehicle's value and visual glory.
+            {whyChooseUsHeader.description}
           </p>
         </div>
 

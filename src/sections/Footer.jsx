@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
+import { contactInfo } from '../data/siteData';
 
 export default function Footer() {
   const [email, setEmail] = useState('');

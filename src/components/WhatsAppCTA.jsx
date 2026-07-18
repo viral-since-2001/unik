@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
+import { contactInfo } from '../data/siteData';
 
 export default function WhatsAppCTA() {
-  const phoneNumber = "1234567890"; // Mock number
-  const message = encodeURIComponent("Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.");
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = `https://wa.me/${contactInfo.phoneRaw}?text=${encodeURIComponent(contactInfo.whatsappMsg)}`;
 
   return (
     <motion.a
@@ -26,7 +25,7 @@ export default function WhatsAppCTA() {
       <MessageSquare className="w-5 h-5 fill-current" />
       
       {/* Premium Tooltip */}
-      <div className="absolute left-14 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 origin-left transition-all duration-300 pointer-events-none whitespace-nowrap bg-black/90 border border-white/10 px-3 py-1.5 rounded text-xs text-white tracking-wider flex items-center gap-2">
+      <div className="absolute left-14 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 origin-left transition-all duration-300 pointer-events-none whitespace-nowrap bg-black/90 border border-white/10 px-3 py-1.5 rounded-xs text-white tracking-wider flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
         Chat on WhatsApp
       </div>

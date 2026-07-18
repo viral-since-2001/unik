@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote, CheckCircle } from 'lucide-react';
-import { testimonials } from '../data/siteData';
+import { testimonials, testimonialsHeader } from '../data/siteData';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
 
   const nextSlide = () => {
     setDirection(1);
@@ -52,10 +52,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Client Endorsements
+            {testimonialsHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-4">
-            Words From Our Patrons
+            {testimonialsHeader.title}
           </h2>
         </div>
 

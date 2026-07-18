@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { processSteps } from '../data/siteData';
+import { processSteps, processHeader } from '../data/siteData';
 
 const timelineVariants = {
   hidden: {},
@@ -30,13 +30,13 @@ export default function Process() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Chronological Workflow
+            {processHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Our Precision Process
+            {processHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            How we transform your vehicle from its current state to a perfect, sealed showroom finish.
+            {processHeader.description}
           </p>
         </div>
 

@@ -1,6 +1,6 @@
-// siteData.js - Static data for Unik Car Care & Spa
+// siteData.js - Static data externalized for dynamic API rendering
 
-// Import images from assets (Vite will resolve these paths)
+// Import images from assets
 import heroBg from '../assets/images/hero_bg.jpg';
 import beforeDirty from '../assets/images/before_dirty.jpg';
 import afterClean from '../assets/images/after_clean.jpg';
@@ -8,6 +8,119 @@ import ceramicImg from '../assets/images/ceramic.jpg';
 import interiorImg from '../assets/images/interior.jpg';
 import foamWashImg from '../assets/images/foam_wash.jpg';
 
+// Centralized Business Contact details
+export const contactInfo = {
+  phone: "+1 (234) 567-890",
+  phoneRaw: "1234567890",
+  email: "concierge@unikcarcare.com",
+  address: "100 Luxury Avenue, Suite A, Beverly Hills, CA 90210",
+  hours: "Monday - Saturday: 8:00 AM - 6:00 PM\nSunday: Closed (By Appointment Only)",
+  whatsappMsg: "Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.7792619472395!2d-118.40428522345091!3d34.07512187314736!2m3!1f0!2f0!3f0!3m2!1i1024!2i769!4f13.1!3m3!1m2!1s0x80c2bc04ce9df87b%3A0xe10ee071239c0d38!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+};
+
+// Hero section static contents
+export const heroContent = {
+  badge: "Premium Detailing Studio",
+  title: "Premium Car\nDetailing & SPA",
+  subtitle: "Bring your car back to showroom perfection with world-class paint correction, multi-year hydrophobic ceramic coatings, and bespoke interior restoration.",
+  primaryBtnText: "Book Appointment",
+  secondaryBtnText: "Explore Services",
+  ratingTitle: "500+ Happy Customers",
+  ratingSubtitle: "Providing standard-setting automotive detailing and premium surface preservation.",
+  stats: {
+    leftNumber: "9H Hardness",
+    leftLabel: "Premium Products",
+    rightNumber: "100% Elite",
+    rightLabel: "Certified Experts"
+  },
+  scrollDownText: "Scroll Down"
+};
+
+// Headers content for all page sections
+export const whyChooseUsHeader = {
+  subtitle: "Uncompromising Excellence",
+  title: "Why Discerning Owners Choose Us",
+  description: "We merge advanced chemical engineering with artisan craftsmanship to preserve your vehicle's value and visual glory."
+};
+
+export const servicesHeader = {
+  subtitle: "Bespoke Detailing Services",
+  title: "Unrivaled Care For All Surfaces",
+  description: "Explore our curated menu of detailing, correction, and surface protection therapies, engineered to produce a concour-level presentation."
+};
+
+export const comparisonHeader = {
+  subtitle: "Service Matrix",
+  title: "Compare detailing tiers",
+  description: "Select a service tier below to explore its duration, inclusions, warranties, and target outcomes."
+};
+
+export const processHeader = {
+  subtitle: "Chronological Workflow",
+  title: "Our Precision Process",
+  description: "How we transform your vehicle from its current state to a perfect, sealed showroom finish."
+};
+
+export const beforeAfterContent = {
+  subtitle: "Visual Proof",
+  title: "Precision Paint Correction",
+  description: "Slide the handle to witness how our paint correction process eliminates micro-scratches, swirl marks, and oxidation to achieve a true mirror finish.",
+  beforeLabel: "Before: Swirl Marks",
+  afterLabel: "After: Flawless Polish"
+};
+
+export const pricingHeader = {
+  subtitle: "Pricing Guides",
+  title: "Luxury Detailing Packages",
+  description: "Select a tailored combination of correction and protection treatments crafted to restore and protect your automobile."
+};
+
+export const statsHeader = {
+  yearsTarget: 12,
+  yearsLabel: "Years Experience",
+  yearsSub: "Crafting showroom finishes",
+  carsTarget: 4800,
+  carsLabel: "Cars Detailed",
+  carsSub: "Exotics, sedans, & SUVs",
+  customersTarget: 2500,
+  customersLabel: "Happy Customers",
+  customersSub: "100% satisfaction rating",
+  ratingTarget: 50,
+  ratingLabel: "Average Rating",
+  ratingSub: "Google & verified reviews"
+};
+
+export const galleryHeader = {
+  subtitle: "Brand Portfolio",
+  title: "Elite Showroom Gallery",
+  description: "Filter through our visual catalog of corrected and protected supercars, luxury sedans, and performance SUVs."
+};
+
+export const testimonialsHeader = {
+  subtitle: "Client Endorsements",
+  title: "Words From Our Patrons"
+};
+
+export const faqHeader = {
+  subtitle: "Common Questions",
+  title: "Frequently Asked Questions",
+  description: "Find answers to commonly asked questions about our process, protection levels, and service procedures."
+};
+
+export const bookingCtaContent = {
+  badge: "Limited Availabilities This Week",
+  title: "Ready to Make Your Car\nShine Like New Again?",
+  description: "Experience standard-setting automotive detailing. Schedule your appointment today and give your vehicle the care it deserves."
+};
+
+export const contactHeader = {
+  subtitle: "Reservation Desk",
+  title: "Book your slot",
+  description: "Request an appointment at our premium garage. Our concierge team will review and confirm your details."
+};
+
+// Item Cards & Accompanying Arrays
 export const whyChooseUs = [
   {
     id: "products",

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { faqs } from '../data/siteData';
+import { faqs, faqHeader } from '../data/siteData';
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -21,13 +21,13 @@ export default function FAQ() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Common Questions
+            {faqHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Frequently Asked Questions
+            {faqHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Find answers to commonly asked questions about our process, protection levels, and service procedures.
+            {faqHeader.description}
           </p>
         </div>
 

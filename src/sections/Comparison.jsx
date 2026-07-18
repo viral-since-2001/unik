@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ShieldCheck, HelpCircle, Star } from 'lucide-react';
-import { comparisons } from '../data/siteData';
+import { comparisons, comparisonHeader } from '../data/siteData';
 
 export default function Comparison() {
   const [activeTab, setActiveTab] = useState(comparisons[3].id); // Default to Ceramic Coating (Most Popular)
@@ -18,13 +18,13 @@ export default function Comparison() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Service Matrix
+            {comparisonHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Compare detailing tiers
+            {comparisonHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Select a service tier below to explore its duration, inclusions, warranties, and target outcomes.
+            {comparisonHeader.description}
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Comparison() {
               )}
               <span className="relative z-10 flex items-center gap-1.5">
                 {pkg.name}
-                {pkg.popular && <Star className="w-3 h-3 fill-current mt-[-1px]" />}
+                {pkg.popular && <Star className="w-3.5 h-3.5 fill-current mt-[-1px]" />}
               </span>
             </button>
           ))}

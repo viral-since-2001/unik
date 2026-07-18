@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Search } from 'lucide-react';
-import { galleryItems } from '../data/siteData';
+import { galleryItems, galleryHeader } from '../data/siteData';
 
 const categories = ['all', 'ceramic', 'ppf', 'suv', 'sedan', 'luxury'];
 
@@ -23,13 +23,13 @@ export default function Gallery() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Brand Portfolio
+            {galleryHeader.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Elite Showroom Gallery
+            {galleryHeader.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Filter through our visual catalog of corrected and protected supercars, luxury sedans, and performance SUVs.
+            {galleryHeader.description}
           </p>
         </div>
 

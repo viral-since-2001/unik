@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeftRight } from 'lucide-react';
 import beforeDirty from '../assets/images/before_dirty.jpg';
 import afterClean from '../assets/images/after_clean.jpg';
+import { beforeAfterContent } from '../data/siteData';
 
 export default function BeforeAfter() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -71,13 +72,13 @@ export default function BeforeAfter() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase font-semibold">
-            Visual Proof
+            {beforeAfterContent.subtitle}
           </span>
           <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mt-3 mb-6">
-            Precision Paint Correction
+            {beforeAfterContent.title}
           </h2>
           <p className="font-inter text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
-            Slide the handle to witness how our paint correction process eliminates micro-scratches, swirl marks, and oxidation to achieve a true mirror finish.
+            {beforeAfterContent.description}
           </p>
         </div>
 
@@ -97,7 +98,7 @@ export default function BeforeAfter() {
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           />
           <div className="absolute right-6 top-6 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 text-[10px] text-white tracking-[2px] uppercase z-20 font-semibold font-inter">
-            After: Flawless Polish
+            {beforeAfterContent.afterLabel}
           </div>
 
           {/* BEFORE Image (Foreground clipped) */}
@@ -108,12 +109,11 @@ export default function BeforeAfter() {
             <img
               src={beforeDirty}
               alt="Before paint correction"
-              // Keep the image width fixed to container width so it doesn't compress
               className="absolute top-0 left-0 w-full h-full object-cover max-w-none pointer-events-none"
               style={{ width: containerWidth }}
             />
             <div className="absolute left-6 top-6 bg-[#C8A96A] px-3.5 py-1.5 rounded-full text-[10px] text-[#0B0B0B] tracking-[2px] uppercase z-20 font-bold font-inter shadow-[0_4px_10px_rgba(200,169,106,0.3)]">
-              Before: Swirl Marks
+              {beforeAfterContent.beforeLabel}
             </div>
           </div>
 

@@ -1,21 +1,23 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import useCountUp from '../hooks/useCountUp';
+import { statsHeader } from '../data/siteData';
 
 export default function Stats() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); // Animate once
+    const handleObserver = ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
         }
-      },
-      { threshold: 0.2 }
-    );
+      }
+    };
+
+    const observer = new IntersectionObserver(handleObserver, { threshold: 0.2 });
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -24,36 +26,36 @@ export default function Stats() {
     return () => observer.disconnect();
   }, []);
 
-  // Custom animated numbers
-  const years = useCountUp(12, 1800, isVisible);
-  const cars = useCountUp(4800, 2000, isVisible);
-  const customers = useCountUp(2500, 2000, isVisible);
-  const rating = useCountUp(50, 1500, isVisible); // Represented as 5.0 (so divide by 10)
+  // Custom count up timers fueled by dynamic site data configurations
+  const years = useCountUp(statsHeader.yearsTarget, 1800, isVisible);
+  const cars = useCountUp(statsHeader.carsTarget, 2000, isVisible);
+  const customers = useCountUp(statsHeader.customersTarget, 2000, isVisible);
+  const rating = useCountUp(statsHeader.ratingTarget, 1500, isVisible);
 
   const statsItems = [
     {
       id: "years",
       number: `${years}+`,
-      label: "Years Experience",
-      subText: "Crafting showroom finishes"
+      label: statsHeader.yearsLabel,
+      subText: statsHeader.yearsSub
     },
     {
       id: "cars",
       number: `${cars.toLocaleString()}+`,
-      label: "Cars Detailed",
-      subText: "Exotics, sedans, & SUVs"
+      label: statsHeader.carsLabel,
+      subText: statsHeader.carsSub
     },
     {
       id: "customers",
       number: `${customers.toLocaleString()}+`,
-      label: "Happy Customers",
-      subText: "100% satisfaction rating"
+      label: statsHeader.customersLabel,
+      subText: statsHeader.customersSub
     },
     {
       id: "rating",
       number: `${(rating / 10).toFixed(1)}/5`,
-      label: "Average Rating",
-      subText: "Google & verified reviews"
+      label: statsHeader.ratingLabel,
+      subText: statsHeader.ratingSub
     }
   ];
 
