@@ -28,6 +28,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleMobileClick = (e, href) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    
+    // Wait a brief moment for the collapse animation, then scroll
+    setTimeout(() => {
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${
@@ -101,7 +115,7 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleMobileClick(e, item.href)}
                   className="font-inter text-sm tracking-widest text-[#B8B8B8] hover:text-white uppercase py-2 border-b border-white/5 transition-colors"
                 >
                   {item.label}
@@ -109,7 +123,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleMobileClick(e, '#contact')}
                 className="flex items-center justify-center gap-2 w-full bg-[#C8A96A] text-[#0B0B0B] font-inter font-semibold text-xs tracking-widest uppercase py-4 rounded-full mt-4"
               >
                 <span>Book Now</span>
