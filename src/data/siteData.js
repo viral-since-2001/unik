@@ -13,10 +13,10 @@ export const contactInfo = {
   phone: "+91 95867 43183",
   phoneRaw: "919586743183",
   email: "nikunjpatel263.pn@gmail.com",
-  address: "100 Luxury Avenue, Suite A, Beverly Hills, CA 90210",
-  hours: "Monday - Saturday: 8:00 AM - 6:00 PM\nSunday: Closed (By Appointment Only)",
+  address: "Dharmvatika complex Opposite baleshwar city, Hathijan Cir, Ahmedabad, Gujarat 382445",
+  hours: "Monday - Sunday: 9:00 AM - 8:00 PM",
   whatsappMsg: "Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.7792619472395!2d-118.40428522345091!3d34.07512187314736!2m3!1f0!2f0!3f0!3m2!1i1024!2i769!4f13.1!3m3!1m2!1s0x80c2bc04ce9df87b%3A0xe10ee071239c0d38!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+  mapEmbedUrl: "https://maps.google.com/maps?q=Unik%20Car%20Care%20and%20Spa,%20Hathijan,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
 };
 
 // Hero section static contents
@@ -26,8 +26,8 @@ export const heroContent = {
   subtitle: "Bring your car back to showroom perfection with world-class paint correction, multi-year hydrophobic ceramic coatings, and bespoke interior restoration.",
   primaryBtnText: "Book Appointment",
   secondaryBtnText: "Explore Services",
-  ratingTitle: "500+ Happy Customers",
-  ratingSubtitle: "Providing standard-setting automotive detailing and premium surface preservation.",
+  ratingTitle: "140+ Happy Customers",
+  ratingSubtitle: "Verified 5.0-Star rated automotive spa on Google & Justdial.",
   stats: {
     leftNumber: "9H Hardness",
     leftLabel: "Premium Products",
@@ -77,18 +77,18 @@ export const pricingHeader = {
 };
 
 export const statsHeader = {
-  yearsTarget: 12,
+  yearsTarget: 4,
   yearsLabel: "Years Experience",
-  yearsSub: "Crafting showroom finishes",
-  carsTarget: 4800,
+  yearsSub: "Operating since 2021",
+  carsTarget: 1500,
   carsLabel: "Cars Detailed",
-  carsSub: "Exotics, sedans, & SUVs",
-  customersTarget: 2500,
-  customersLabel: "Happy Customers",
-  customersSub: "100% satisfaction rating",
+  carsSub: "Hatchbacks, Sedans, & SUVs",
+  customersTarget: 140,
+  customersLabel: "Verified Reviews",
+  customersSub: "5.0-star rating on Justdial",
   ratingTarget: 50,
   ratingLabel: "Average Rating",
-  ratingSub: "Google & verified reviews"
+  ratingSub: "100% positive feedback"
 };
 
 export const galleryHeader = {
@@ -400,30 +400,30 @@ export const galleryItems = [
 export const testimonials = [
   {
     id: 1,
-    name: "Alexander Mercer",
-    role: "Verified Porsche 911 GT3 Owner",
+    name: "Amit Patel",
+    role: "Verified Local Guide",
     stars: 5,
-    vehicle: "Porsche 911 GT3 RS",
-    review: "The paint correction and ceramic coating exceeded every expectation. My GT3 RS has a mirror finish that literally looks liquid. Unik Car Care is the only team I trust with my collection.",
-    avatar: "AM"
+    vehicle: "Hyundai Creta",
+    review: "Excellent service! The staff is incredibly humble and professional. They explained the differences in paint detailing options clearly and did a fantastic job cleaning my car. Highly recommend Unik Car Care!",
+    avatar: "AP"
   },
   {
     id: 2,
-    name: "Sarah Sterling",
-    role: "Verified Tesla Owner",
+    name: "Rohan Sharma",
+    role: "Verified Client",
     stars: 5,
-    vehicle: "Tesla Model S Plaid",
-    review: "The interior looks and smells brand new. The steam cleaning and leather treatment removed everything, and the PPF application is virtually invisible. Absolute perfectionists!",
-    avatar: "SS"
+    vehicle: "Maruti Suzuki Swift",
+    review: "Very satisfied with their washing and detailing work. They use premium products and take their time to ensure the vehicle is spotless. Staff behavior is extremely polite.",
+    avatar: "RS"
   },
   {
     id: 3,
-    name: "Marcus Vance",
-    role: "Verified Aston Martin Owner",
+    name: "Dr. Nidhi Shah",
+    role: "Verified Client",
     stars: 5,
-    vehicle: "Aston Martin DBS",
-    review: "Outstanding craftsmanship! The pickup service was seamless, the team sent progress updates, and the delivery room experience felt like taking delivery of a brand new supercar.",
-    avatar: "MV"
+    vehicle: "Honda City",
+    review: "Best place for car spa and detailing near Hathijan. Clean service, professional team, and very reasonable rates. My car feels completely fresh and brand new again.",
+    avatar: "NS"
   }
 ];
 
