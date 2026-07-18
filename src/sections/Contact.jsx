@@ -35,13 +35,37 @@ export default function Contact() {
     }
   });
 
+  const serviceMap = {
+    'foam-wash': 'Foam Wash & Decontamination',
+    'interior': 'Bespoke Interior Detailing',
+    'exterior': 'Elite Exterior Polishing',
+    'ceramic': 'Ultra Ceramic Coating',
+    'ppf': 'Paint Protection Film (PPF)',
+    'other': 'Custom Detail / Multi-Service'
+  };
+
   const onSubmit = async (data) => {
-    // Simulate API request delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log('Submitted booking data:', data);
+    const serviceName = serviceMap[data.service] || data.service;
+    
+    // Construct beautifully formatted WhatsApp message body
+    const whatsappMessage = `*NEW RESERVATION REQUEST - UNIK CAR CARE & SPA*
+--------------------------------------------
+*Name:* ${data.name}
+*Phone:* ${data.phone}
+*Vehicle:* ${data.vehicle}
+*Service:* ${serviceName}
+*Preferred Date:* ${data.date}
+*Special Request:* ${data.message || 'None'}`;
+
+    const whatsappUrl = `https://wa.me/${contactInfo.phoneRaw}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in a new tab for instant transmission
+    window.open(whatsappUrl, '_blank');
+
     setIsSubmitted(true);
     reset();
-    // Reset submission state after a delay
+    
+    // Reset submission success banner after a delay
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
