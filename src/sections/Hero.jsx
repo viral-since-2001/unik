@@ -15,7 +15,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section id="home" className="relative min-h-screen lg:h-screen w-full overflow-hidden flex items-center justify-center py-24 lg:py-0 bg-[#0B0B0B]">
       {/* Background Image with Parallax Offset */}
       <div
         className="absolute inset-0 bg-cover bg-center w-full h-full"
@@ -63,7 +63,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-24 lg:pt-20">
         
         {/* Main Typography & Buttons */}
         <div className="lg:col-span-7 flex flex-col items-start text-left mt-8 lg:mt-0">
@@ -170,7 +170,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-10"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 cursor-pointer z-10"
         onClick={() => {
           document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
         }}
