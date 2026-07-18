@@ -1,0 +1,99 @@
+import { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import useCountUp from '../hooks/useCountUp';
+
+export default function Stats() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target); // Animate once
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Custom animated numbers
+  const years = useCountUp(12, 1800, isVisible);
+  const cars = useCountUp(4800, 2000, isVisible);
+  const customers = useCountUp(2500, 2000, isVisible);
+  const rating = useCountUp(50, 1500, isVisible); // Represented as 5.0 (so divide by 10)
+
+  const statsItems = [
+    {
+      id: "years",
+      number: `${years}+`,
+      label: "Years Experience",
+      subText: "Crafting showroom finishes"
+    },
+    {
+      id: "cars",
+      number: `${cars.toLocaleString()}+`,
+      label: "Cars Detailed",
+      subText: "Exotics, sedans, & SUVs"
+    },
+    {
+      id: "customers",
+      number: `${customers.toLocaleString()}+`,
+      label: "Happy Customers",
+      subText: "100% satisfaction rating"
+    },
+    {
+      id: "rating",
+      number: `${(rating / 10).toFixed(1)}/5`,
+      label: "Average Rating",
+      subText: "Google & verified reviews"
+    }
+  ];
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative py-20 bg-[#151515] border-y border-white/5 overflow-hidden"
+    >
+      {/* Background soft reflections */}
+      <div className="absolute top-1/2 left-1/4 w-[50vw] h-[50vw] rounded-full bg-white/[0.01] blur-[150px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          {statsItems.map((stat, idx) => (
+            <motion.div
+              key={stat.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.6 }}
+              className="flex flex-col items-center text-center group"
+            >
+              {/* Stat Number */}
+              <span className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-[#C8A96A] tracking-tight text-glow-gold transition-transform group-hover:scale-105 duration-300">
+                {stat.number}
+              </span>
+              
+              {/* Label */}
+              <span className="font-inter text-xs sm:text-sm font-semibold tracking-wider text-white uppercase mt-4">
+                {stat.label}
+              </span>
+              
+              {/* Subtitle */}
+              <span className="font-inter text-[10px] sm:text-xs text-[#B8B8B8] font-light tracking-wide mt-1">
+                {stat.subText}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
