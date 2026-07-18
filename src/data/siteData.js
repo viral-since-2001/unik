@@ -17,7 +17,9 @@ export const contactInfo = {
   hours: "Monday - Sunday: 9:00 AM - 8:00 PM",
   whatsappMsg: "Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.",
   mapEmbedUrl: "https://maps.google.com/maps?q=Unik%20Car%20Care%20and%20Spa,%20Hathijan,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  description: "Ahmedabad's premier detailing studio. Dedicated to preserving vehicle value, locking in showroom gloss, and restoring automotive luxury."
+  description: "Ahmedabad's premier detailing studio. Dedicated to preserving vehicle value, locking in showroom gloss, and restoring automotive luxury.",
+  instagramUrl: "https://www.instagram.com/unik_car_care_and_spa",
+  facebookUrl: "" // Empty since they only have Instagram
 };
 
 // Hero section static contents
