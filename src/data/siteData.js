@@ -50,7 +50,7 @@ export const whyChooseUsHeader = {
 export const servicesHeader = {
   subtitle: "Bespoke Detailing Services",
   title: "Unrivaled Care For All Surfaces",
-  description: "Explore our curated menu of detailing, correction, and surface protection therapies, engineered to produce a concour-level presentation."
+  description: "Explore our curated menu of detailing, correction, and surface protection therapies, engineered to produce a concour-level presentation. Note: The prices are indicative, and actual charges may vary."
 };
 
 export const comparisonHeader = {
@@ -166,135 +166,163 @@ export const whyChooseUs = [
 export const services = [
   {
     id: "car-wash",
-    title: "Foam Wash & Decontamination",
-    description: "Safe multi-stage wash using ultra-soft wash mitts, pH-neutral snow foam, and mechanical clay bar treatment.",
-    time: "1.5 - 2 Hours",
-    price: "75",
+    title: "Car Wash Service",
+    description: "Deep foam wash, engine bay detailing, underbody cleaning, vacuuming, and dashboard dressing.",
+    time: "1 - 1.5 Hours",
+    price: "250",
     image: foamWashImg
   },
   {
-    id: "interior-detailing",
-    title: "Bespoke Interior Detailing",
-    description: "Deep steam extraction, premium leather nourishment, dashboard UV protection, and complete odor elimination.",
-    time: "3 - 4 Hours",
-    price: "180",
-    image: interiorImg
-  },
-  {
-    id: "exterior-detailing",
-    title: "Elite Exterior Polishing",
-    description: "Multi-stage paint wash, iron decontamination, and single-stage machine polish to restore deep paint gloss.",
-    time: "4 - 5 Hours",
-    price: "250",
+    id: "denting-painting",
+    title: "Car Denting & Painting",
+    description: "Precision panel dent removal and factory-grade color matched spray painting and scratch fixes.",
+    time: "1 - 2 Days",
+    price: "1,000",
     image: beforeDirty
   },
   {
-    id: "ceramic-coating",
-    title: "Ultra hydrophobic Ceramic Coating",
-    description: "Gtechniq nanotech coating offering 9H hardness, extreme water beading, and robust swirl resistance.",
-    time: "1.5 - 2 Days",
-    price: "850",
-    image: ceramicImg
+    id: "battery-services",
+    title: "Car Battery Repairs & Service",
+    description: "Battery health diagnostic checks, charging, terminal cleaning, and replacement with premium brands.",
+    time: "30 Mins",
+    price: "300",
+    image: interiorImg
   },
   {
-    id: "ppf",
-    title: "Paint Protection Film (PPF)",
-    description: "Elite self-healing thermoplastic polyurethane shield safeguarding your paint from rock chips and road hazards.",
-    time: "2 - 3 Days",
-    price: "1599",
-    image: heroBg
-  },
-  {
-    id: "engine-cleaning",
-    title: "Precision Engine Bay Detailing",
-    description: "Delicate steam cleaning, degreasing, and protective dressing of all engine bay plastics and rubber hoses.",
-    time: "1.5 Hours",
-    price: "130",
-    image: foamWashImg
-  },
-  {
-    id: "headlight-restoration",
-    title: "Headlight Clarity Restoration",
-    description: "Wet-sanding, compounding, and application of a UV-blocking polymer clear-coat to restore yellowed lenses.",
-    time: "1 Hour",
-    price: "90",
+    id: "mechanical-repairs",
+    title: "Car Mechanical Repairs",
+    description: "Multi-point diagnostic check, engine servicing, tuning, oil change, and brake adjustments.",
+    time: "2 - 4 Hours",
+    price: "499",
     image: afterClean
   },
   {
-    id: "car-sanitization",
-    title: "Elite Bio-Sanitization & Steam",
-    description: "Deep extraction sanitization coupled with medical-grade ozone treatments to eliminate 99.9% of bacteria.",
-    time: "1.5 Hours",
-    price: "110",
+    id: "ac-services",
+    title: "Car AC Repair & Services",
+    description: "AC gas refilling, condenser wash, vent cleaning, filter replacement, and leak diagnostic inspections.",
+    time: "1 - 2 Hours",
+    price: "1,000",
+    image: ceramicImg
+  },
+  {
+    id: "clutch-body",
+    title: "Car Clutch & Body Parts Services",
+    description: "Clutch plate replacements, gear linkage tuning, bumper adjustments, and side mirror fitments.",
+    time: "3 - 5 Hours",
+    price: "300",
+    image: heroBg
+  },
+  {
+    id: "lights-fittings",
+    title: "Car Lights and Fittings",
+    description: "Headlight cleaning, indicator repairs, bulb upgrades, and custom wiring and LED fittings.",
+    time: "1 Hour",
+    price: "300",
+    image: afterClean
+  },
+  {
+    id: "regular-services",
+    title: "Car Regular Services",
+    description: "Oil filter change, fluid top-ups, spark plug clean, wheel alignment check, and complete car checkup.",
+    time: "3 Hours",
+    price: "1,000",
+    image: foamWashImg
+  },
+  {
+    id: "suspension-fitment",
+    title: "Car Suspension Services",
+    description: "Shock absorber checkups, bush replacements, steering linkage updates, and fitment services.",
+    time: "2 - 3 Hours",
+    price: "500",
     image: interiorImg
+  },
+  {
+    id: "tyre-wheel",
+    title: "Car Tyre & Wheel Services",
+    description: "Wheel alignment, computerized wheel balancing, tyre rotation, and pressure checks.",
+    time: "1 Hour",
+    price: "300",
+    image: ceramicImg
+  },
+  {
+    id: "polishing-services",
+    title: "Car Polishing Services",
+    description: "Machine rubbing compounding, minor scratch removal, wax polish, and paint gloss restoration.",
+    time: "2 - 3 Hours",
+    price: "300",
+    image: beforeDirty
+  },
+  {
+    id: "car-inspections",
+    title: "Car Inspections",
+    description: "Pre-purchase evaluation, computerized scanning, structural inspection, and test drive evaluation report.",
+    time: "1.5 Hours",
+    price: "500",
+    image: foamWashImg
   }
 ];
 
 export const comparisons = [
   {
-    id: "basic",
-    name: "Basic Wash",
-    price: "50",
-    duration: "45 Mins",
+    id: "regular",
+    name: "Regular Service",
+    price: "1,000",
+    duration: "3 Hours",
     features: [
-      "Exterior Foam Bath",
-      "Hand Dry with Microfiber",
-      "Wheel & Tire Cleaning",
-      "Basic Vacuuming",
-      "Windows Cleaned Outside"
+      "Engine Oil Top-up",
+      "Oil Filter Replacement",
+      "Air Filter Cleaning",
+      "Complete Foam Wash",
+      "40-Point Inspection Check"
     ],
-    warranty: "None",
+    warranty: "30 Days",
     recommended: "Daily Commuters"
   },
   {
-    id: "premium",
-    name: "Premium Wash",
-    price: "95",
-    duration: "1.5 Hours",
-    features: [
-      "Everything in Basic Wash",
-      "Iron Decontamination",
-      "Spray Wax Gloss Protection",
-      "Deep Wheel & Arch Dressing",
-      "Full Interior Dusting & Wipe",
-      "Door Jambs Detailed"
-    ],
-    warranty: "2 Weeks",
-    recommended: "Weekly Maintenance"
-  },
-  {
-    id: "detailing",
-    name: "Full Detailing",
-    price: "270",
+    id: "polishing",
+    name: "Body Polishing",
+    price: "3,000",
     duration: "4 Hours",
     features: [
-      "Everything in Premium Wash",
-      "Clay Bar Paint Treatment",
-      "Single-Stage Machine Gloss Polish",
-      "Leather Cleaning & Conditioning",
-      "Carpet & Mat Steam Extraction",
-      "Engine Bay Clean & Dress",
-      "6-Month Paint Sealant"
+      "Deep Foam Wash & Clay",
+      "Machine Rubbing Compounding",
+      "Minor Paint Scratches Buffing",
+      "Ultra-gloss Wax Coating",
+      "Tire & Plastic Trims Dressing"
     ],
-    warranty: "1 Month",
-    recommended: "Bi-Annual Rejuvenation"
+    warranty: "3 Months",
+    recommended: "Seasonal Gloss Restoration"
+  },
+  {
+    id: "teflon",
+    name: "Teflon Coating",
+    price: "5,000",
+    duration: "6 Hours",
+    features: [
+      "Full Detailing Prep Wash",
+      "Teflon Sealant Polish Layer",
+      "High Hydrophobic Water Beading",
+      "Anti-Static Rust Protection",
+      "1-Year Maintenance Inspection"
+    ],
+    warranty: "1 Year",
+    recommended: "Showroom Shine Fans"
   },
   {
     id: "ceramic",
     name: "Ceramic Coating",
-    price: "850",
+    price: "12,000",
     duration: "1.5 Days",
     features: [
-      "Everything in Full Detailing",
-      "Multi-stage Paint Correction (Swirls)",
-      "9H Hydrophobic Ceramic Coating",
-      "Glass & Wheel Face Coatings",
-      "Trim Restorer & Protection",
-      "Infrared Heat Lamps Curing",
-      "Complimentary 1-Month Inspection Wash"
+      "Multi-stage Paint Correction",
+      "9H Hardness Coating Layer",
+      "Ultra Hydrophobic Protection",
+      "UV Rays & Swirl Protection",
+      "Infrared Heat Curing",
+      "Complimentary 1-Month Wash Checkup"
     ],
-    warranty: "5 Years",
-    recommended: "Exotics, New Cars & Enthusiasts",
+    warranty: "3 Years",
+    recommended: "Exotics & New Vehicles",
     popular: true
   }
 ];
@@ -339,52 +367,50 @@ export const processSteps = [
 
 export const pricingPackages = [
   {
-    name: "Silver Package",
-    price: "199",
-    description: "Premium cleansing and protection package designed for routine seasonal care and high gloss.",
+    name: "Regular Pack",
+    price: "1,000",
+    description: "Essential car maintenance check, engine tuning, filter cleaning, and complete diagnostic checks.",
     features: [
-      "Safe Foam Wash & Clay Treatment",
-      "Gloss-Enhancing Hand Polish",
-      "Premium Synthetic Paint Sealant",
-      "Interior Dusting & Vacuuming",
-      "Leather Treatment & Wipe-down",
-      "Wheel Faces & Tires Dressed",
-      "3-Month Durability"
+      "Engine Oil Replacement Checkup",
+      "Air and Oil Filter Cleaning",
+      "Fluids Top-up (Coolant, Brake)",
+      "Spark Plugs Cleaning",
+      "Car Underbody Checkup",
+      "Computerized Fault Diagnosis",
+      "Indicative Justdial Prices"
     ],
-    bestFor: "Essential preservation"
+    bestFor: "Basic Car Health"
   },
   {
-    name: "Gold Package",
-    price: "399",
-    description: "Our signature paint correction and deep cabin refresh that restores showroom aesthetic.",
+    name: "Premium Pack",
+    price: "4,999",
+    description: "Deep interior upholstery refresh, exterior compounding polishing, and AC system servicing.",
     features: [
-      "Everything in Silver Package",
-      "Single-Stage Machine Paint Correction",
-      "6-Month Silica Paint Sealant",
-      "Full Cabin Steam Extraction",
-      "Leather Deep Clean & Conditioning",
-      "Engine Bay Detailed & Dressed",
-      "Exhaust Tips Polished",
-      "6-Month Durability"
+      "Deep Snow Foam Washing",
+      "Exterior Machine Rubbing Wax Polish",
+      "Full Cabin Vacuum & Sanitization",
+      "Upholstery Dry Cleaning",
+      "AC Vent Cleaning & Gas Checkup",
+      "Engine Bay Detailed Dressing",
+      "100% Client Satisfaction Guarantee"
     ],
-    bestFor: "Ultimate rejuvenation",
+    bestFor: "Complete Rejuvenation",
     popular: true
   },
   {
-    name: "Platinum Package",
-    price: "799",
-    description: "Complete elite rejuvenation featuring deep paint correction and high-end protection layers.",
+    name: "Detox Ceramic Pack",
+    price: "12,999",
+    description: "Ultra protective Teflon & multi-stage paint correction nanotech coatings for lasting shine.",
     features: [
-      "Everything in Gold Package",
-      "Dual-Stage Machine Paint Correction",
-      "1-Year Hydrophobic Coating (Body & Glass)",
-      "Wheel Barrels & Calipers Coated",
-      "Premium Leather & Fabric Protection",
-      "Matte & Piano Black Trim Refinishing",
-      "Fabric Guard Shielding",
-      "1-Year Warranty"
+      "Gold standard paint compound buffing",
+      "Hydrophobic Teflon/Ceramic Coating",
+      "9H Hardness Scratch Resistance",
+      "Wheel Faces & Glasses Shielding",
+      "Odor removal treatment inside",
+      "UV & Oxidation Fade Protection",
+      "2-Year Certified Warranty"
     ],
-    bestFor: "Show-car perfection"
+    bestFor: "Showroom Preservation"
   }
 ];
 

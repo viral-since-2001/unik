@@ -72,7 +72,7 @@ export default function Pricing() {
                     {pkg.description}
                   </p>
                   <div className="flex items-baseline gap-1 mt-4">
-                    <span className="font-inter text-2xl text-white font-light">$</span>
+                    <span className="font-inter text-2xl text-white font-light">₹</span>
                     <span className={`font-playfair text-5xl md:text-6xl font-bold tracking-tight ${
                       pkg.popular ? 'text-[#C8A96A] text-glow-gold' : 'text-white'
                     }`}>

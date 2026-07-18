@@ -88,7 +88,7 @@ export default function Services() {
                     </div>
                     <div className="flex items-center gap-1.5 font-semibold text-white">
                       <Tag className="w-3.5 h-3.5 text-[#C8A96A]" />
-                      <span>Est. ${service.price}</span>
+                      <span>Est. ₹{service.price}</span>
                     </div>
                   </div>
 

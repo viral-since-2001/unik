@@ -81,7 +81,7 @@ export default function Comparison() {
                   </h3>
                   <div className="flex items-baseline gap-1 mt-4 mb-2">
                     <span className="font-playfair text-5xl font-bold text-[#C8A96A] text-glow-gold">
-                      ${activePackage.price}
+                      ₹{activePackage.price}
                     </span>
                     <span className="font-inter text-xs text-[#B8B8B8] font-light">starting price</span>
                   </div>
