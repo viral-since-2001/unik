@@ -40,7 +40,7 @@ export default function Footer() {
               </div>
             </a>
             <p className="font-inter text-xs sm:text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide max-w-sm mt-2">
-              Beverly Hills' premier detailing studio. Dedicated to preserving value, locking in showroom gloss, and restoring automotive luxury.
+              {contactInfo.description}
             </p>
             {/* Social handles */}
             <div className="flex items-center gap-4 mt-2">

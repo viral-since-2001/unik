@@ -16,7 +16,8 @@ export const contactInfo = {
   address: "Dharmvatika complex Opposite baleshwar city, Hathijan Cir, Ahmedabad, Gujarat 382445",
   hours: "Monday - Sunday: 9:00 AM - 8:00 PM",
   whatsappMsg: "Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Unik%20Car%20Care%20and%20Spa,%20Hathijan,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  mapEmbedUrl: "https://maps.google.com/maps?q=Unik%20Car%20Care%20and%20Spa,%20Hathijan,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  description: "Ahmedabad's premier detailing studio. Dedicated to preserving vehicle value, locking in showroom gloss, and restoring automotive luxury."
 };
 
 // Hero section static contents
