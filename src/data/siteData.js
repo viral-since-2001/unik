@@ -10,9 +10,9 @@ import foamWashImg from '../assets/images/foam_wash.jpg';
 
 // Centralized Business Contact details
 export const contactInfo = {
-  phone: "+1 (234) 567-890",
-  phoneRaw: "1234567890",
-  email: "concierge@unikcarcare.com",
+  phone: "+91 95867 43183",
+  phoneRaw: "919586743183",
+  email: "nikunjpatel263.pn@gmail.com",
   address: "100 Luxury Avenue, Suite A, Beverly Hills, CA 90210",
   hours: "Monday - Saturday: 8:00 AM - 6:00 PM\nSunday: Closed (By Appointment Only)",
   whatsappMsg: "Hi Unik Car Care, I'm interested in booking a luxury detailing package. Please share details.",
