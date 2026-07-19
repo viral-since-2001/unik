@@ -7,6 +7,15 @@ import afterClean from '../assets/images/after_clean.jpg';
 import ceramicImg from '../assets/images/ceramic.jpg';
 import interiorImg from '../assets/images/interior.jpg';
 import foamWashImg from '../assets/images/foam_wash.jpg';
+import galleryVelarFoam from '../assets/images/gallery/gallery-range-rover-velar-foam.jpg';
+import galleryVelarWhite from '../assets/images/gallery/gallery-range-rover-velar-white.jpg';
+import galleryFortunerWhite from '../assets/images/gallery/gallery-fortuner-white.jpg';
+import galleryBmw5 from '../assets/images/gallery/gallery-bmw-5-series-black.jpg';
+import galleryBmwX3 from '../assets/images/gallery/gallery-bmw-x3-white.jpg';
+import galleryInnovaHycross from '../assets/images/gallery/gallery-innova-hycross-black.jpg';
+import galleryFortunerSilver from '../assets/images/gallery/gallery-fortuner-silver-bay.jpg';
+import galleryTataCurvv from '../assets/images/gallery/gallery-tata-curvv-delivery.jpg';
+import gallerySedanWash from '../assets/images/gallery/gallery-camry-wash-bay.jpg';
 
 // Centralized Business Contact details
 export const contactInfo = {
@@ -80,9 +89,9 @@ export const pricingHeader = {
 };
 
 export const statsHeader = {
-  yearsTarget: 4,
+  yearsTarget: 7,
   yearsLabel: "Years Experience",
-  yearsSub: "Operating since 2021",
+  yearsSub: "Operating since 2019",
   carsTarget: 1500,
   carsLabel: "Cars Detailed",
   carsSub: "Hatchbacks, Sedans, & SUVs",
@@ -104,6 +113,39 @@ export const testimonialsHeader = {
   subtitle: "Client Endorsements",
   title: "Words From Our Patrons"
 };
+
+export const founderHeader = {
+  subtitle: "The Story Behind Unik",
+  title: "Meet Our Founder"
+};
+
+export const founderContent = {
+  name: "Nikunj Patel",
+  role: "Founder & Master Detailer",
+  initials: "NP",
+  bio: "Nikunj founded Unik Car Care & Spa in 2019 with a single bay in Hathijan and an obsession with getting every panel, vent, and stitch of leather absolutely right. What began as a one-man operation has grown into Ahmedabad's trusted detailing studio, having personally overseen the care of over 1,500 vehicles ranging from daily hatchbacks to Range Rovers and BMWs. He still inspects every car before it leaves the bay.",
+  quote: "Every car that rolls out of our bay should look better than the day it was bought. That's not a tagline, it's how we check our own work.",
+  highlights: [
+    { label: "Founded", value: "2019" },
+    { label: "Cars Detailed", value: "1,500+" },
+    { label: "Rating", value: "5.0 / 5" }
+  ]
+};
+
+export const careerHeader = {
+  subtitle: "Join The Team",
+  title: "Build Your Career With Unik",
+  description: "We're always looking for skilled detailers, technicians, and service-minded people who take pride in their work. Send us your resume and we'll get in touch."
+};
+
+export const jobRoles = [
+  "Car Detailer / Polisher",
+  "Denting & Painting Technician",
+  "AC & Mechanical Technician",
+  "Service Advisor / Front Desk",
+  "Helper / Trainee",
+  "Other"
+];
 
 export const faqHeader = {
   subtitle: "Common Questions",
@@ -169,7 +211,7 @@ export const services = [
     title: "Car Wash Service",
     description: "Deep foam wash, engine bay detailing, underbody cleaning, vacuuming, and dashboard dressing.",
     time: "1 - 1.5 Hours",
-    price: "250",
+    price: "500",
     image: foamWashImg
   },
   {
@@ -177,7 +219,7 @@ export const services = [
     title: "Car Denting & Painting",
     description: "Precision panel dent removal and factory-grade color matched spray painting and scratch fixes.",
     time: "1 - 2 Days",
-    price: "1,000",
+    price: "2,500",
     image: beforeDirty
   },
   {
@@ -193,7 +235,7 @@ export const services = [
     title: "Car Mechanical Repairs",
     description: "Multi-point diagnostic check, engine servicing, tuning, oil change, and brake adjustments.",
     time: "2 - 4 Hours",
-    price: "499",
+    price: "500",
     image: afterClean
   },
   {
@@ -201,31 +243,15 @@ export const services = [
     title: "Car AC Repair & Services",
     description: "AC gas refilling, condenser wash, vent cleaning, filter replacement, and leak diagnostic inspections.",
     time: "1 - 2 Hours",
-    price: "1,000",
+    price: "1,200 - 1,500",
     image: ceramicImg
-  },
-  {
-    id: "clutch-body",
-    title: "Car Clutch & Body Parts Services",
-    description: "Clutch plate replacements, gear linkage tuning, bumper adjustments, and side mirror fitments.",
-    time: "3 - 5 Hours",
-    price: "300",
-    image: heroBg
-  },
-  {
-    id: "lights-fittings",
-    title: "Car Lights and Fittings",
-    description: "Headlight cleaning, indicator repairs, bulb upgrades, and custom wiring and LED fittings.",
-    time: "1 Hour",
-    price: "300",
-    image: afterClean
   },
   {
     id: "regular-services",
     title: "Car Regular Services",
     description: "Oil filter change, fluid top-ups, spark plug clean, wheel alignment check, and complete car checkup.",
     time: "3 Hours",
-    price: "1,000",
+    price: "1,500",
     image: foamWashImg
   },
   {
@@ -233,7 +259,7 @@ export const services = [
     title: "Car Suspension Services",
     description: "Shock absorber checkups, bush replacements, steering linkage updates, and fitment services.",
     time: "2 - 3 Hours",
-    price: "500",
+    price: "1,800 - 2,000",
     image: interiorImg
   },
   {
@@ -241,7 +267,7 @@ export const services = [
     title: "Car Tyre & Wheel Services",
     description: "Wheel alignment, computerized wheel balancing, tyre rotation, and pressure checks.",
     time: "1 Hour",
-    price: "300",
+    price: "500",
     image: ceramicImg
   },
   {
@@ -249,7 +275,7 @@ export const services = [
     title: "Car Polishing Services",
     description: "Machine rubbing compounding, minor scratch removal, wax polish, and paint gloss restoration.",
     time: "2 - 3 Hours",
-    price: "300",
+    price: "2,500 - 3,500",
     image: beforeDirty
   },
   {
@@ -368,7 +394,7 @@ export const processSteps = [
 export const pricingPackages = [
   {
     name: "Regular Pack",
-    price: "1,000",
+    price: "1,500",
     description: "Essential car maintenance check, engine tuning, filter cleaning, and complete diagnostic checks.",
     features: [
       "Engine Oil Replacement Checkup",
@@ -415,44 +441,107 @@ export const pricingPackages = [
 ];
 
 export const galleryItems = [
-  { id: 1, title: "Porsche 911 GT3 Ceramic Coating", category: "ceramic", image: ceramicImg },
-  { id: 2, title: "Mercedes AMG Interior Detailing", category: "luxury", image: interiorImg },
-  { id: 3, title: "Audi R8 Active Snow Wash", category: "luxury", image: foamWashImg },
-  { id: 4, title: "Porsche 911 Showroom PPF Protection", category: "ppf", image: heroBg },
-  { id: 5, title: "Land Rover Paint Correction Before/After", category: "ceramic", image: afterClean },
-  { id: 6, title: "Tesla Model S Plaid Foam Bath", category: "sedan", image: foamWashImg },
-  { id: 7, title: "BMW M8 Interior Leather Dressing", category: "luxury", image: interiorImg },
-  { id: 8, title: "Ferrari 488 Nanotech Coating", category: "ceramic", image: ceramicImg },
-  { id: 9, title: "Lamborghini Urus Full Protection Film", category: "suv", image: heroBg }
+  { id: 1, title: "Range Rover Velar Foam Bath", category: "suv", image: galleryVelarFoam },
+  { id: 2, title: "Range Rover Velar Showroom Finish", category: "luxury", image: galleryVelarWhite },
+  { id: 3, title: "BMW 5-Series Luxury Detailing", category: "luxury", image: galleryBmw5 },
+  { id: 4, title: "BMW X3 Exterior Detailing", category: "suv", image: galleryBmwX3 },
+  { id: 5, title: "Toyota Fortuner Detailing", category: "suv", image: galleryFortunerWhite },
+  { id: 6, title: "Toyota Fortuner Wash & Polish", category: "suv", image: galleryFortunerSilver },
+  { id: 7, title: "Toyota Innova Hycross Delivery Detail", category: "suv", image: galleryInnovaHycross },
+  { id: 8, title: "Tata Curvv New Car Delivery", category: "suv", image: galleryTataCurvv },
+  { id: 9, title: "Sedan Deep Foam Wash", category: "sedan", image: gallerySedanWash }
 ];
 
 export const testimonials = [
   {
     id: 1,
-    name: "Amit Patel",
-    role: "Verified Local Guide",
+    name: "Mayank Rathod",
+    role: "Google Review",
     stars: 5,
-    vehicle: "Hyundai Creta",
-    review: "Excellent service! The staff is incredibly humble and professional. They explained the differences in paint detailing options clearly and did a fantastic job cleaning my car. Highly recommend Unik Car Care!",
-    avatar: "AP"
+    vehicle: "Regular Customer",
+    review: "I've been a regular customer for car washing and complete detailing services. Nikunj Bhai and his team are always professional, reliable, and consistently deliver exceptional results. Every visit exceeds my expectations.",
+    avatar: "MR"
   },
   {
     id: 2,
-    name: "Rohan Sharma",
-    role: "Verified Client",
+    name: "Patel Pragnesh",
+    role: "Google Review",
     stars: 5,
-    vehicle: "Maruti Suzuki Swift",
-    review: "Very satisfied with their washing and detailing work. They use premium products and take their time to ensure the vehicle is spotless. Staff behavior is extremely polite.",
-    avatar: "RS"
+    vehicle: "Mahindra XUV700",
+    review: "Amazing work and outstanding customer service. They even provide pickup and drop facilities. I got Teflon coating done on my XUV700, and the results were excellent. Highly recommended for car enthusiasts.",
+    avatar: "PP"
   },
   {
     id: 3,
-    name: "Dr. Nidhi Shah",
-    role: "Verified Client",
+    name: "Kaushal Dave",
+    role: "Google Review",
     stars: 5,
-    vehicle: "Honda City",
-    review: "Best place for car spa and detailing near Hathijan. Clean service, professional team, and very reasonable rates. My car feels completely fresh and brand new again.",
-    avatar: "NS"
+    vehicle: "Verified Customer",
+    review: "The best place for car accessories and detailing. Every service is performed with attention to detail, the pricing is transparent, and there are no hidden charges. A complete solution for your car.",
+    avatar: "KD"
+  },
+  {
+    id: 4,
+    name: "Utkarsh Thaker",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "I recently used Unik's car washing service, and they cleaned my car perfectly inside and out. It genuinely looked like it had just come out of the showroom. Excellent workmanship and attention to detail.",
+    avatar: "UT"
+  },
+  {
+    id: 5,
+    name: "Harshad Dholariya",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "A one-stop destination for car accessories, denting, painting, washing, and servicing. Their skilled team delivers reliable, high-quality work every time. I highly recommend them.",
+    avatar: "HD"
+  },
+  {
+    id: 6,
+    name: "Pinal Patel",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "The best car service center in Hathijan and one of the finest in Ahmedabad. Honest ownership, trustworthy service, and consistently high-quality work.",
+    avatar: "PP"
+  },
+  {
+    id: 7,
+    name: "Rushi Dave",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "A highly professional car washing and detailing service. The staff are courteous, supportive, and dedicated to delivering excellent results. In my experience, they are the best car care service in the Hathijan area.",
+    avatar: "RD"
+  },
+  {
+    id: 8,
+    name: "Meera Gohil",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Long-time Customer",
+    review: "For me, Unik Car Care is the one-stop solution for every car-related problem. They have been taking care of my car for years, and I trust only Unik Car Care. Their honesty and quality of work are unmatched.",
+    avatar: "MG"
+  },
+  {
+    id: 9,
+    name: "Yash Prajapati",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "My experience with Unik Car Care & Spa was outstanding. The staff were polite, attentive, and highly skilled. They treated my car with great care and maintained complete professionalism throughout the service.",
+    avatar: "YP"
+  },
+  {
+    id: 10,
+    name: "Darshan Vinchhi",
+    role: "Google Review",
+    stars: 5,
+    vehicle: "Verified Customer",
+    review: "One of the finest car care centers with complete solutions for every vehicle. The quality of service is exceptional, and I would strongly recommend Unik Car Care & Spa to anyone.",
+    avatar: "DV"
   }
 ];
 

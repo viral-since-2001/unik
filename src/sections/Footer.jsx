@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
 import { contactInfo } from '../data/siteData';
+import logo from '../assets/images/logo.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -26,18 +27,8 @@ export default function Footer() {
           
           {/* Brand Info (Col 1-4) */}
           <div className="lg:col-span-4 flex flex-col items-start gap-5">
-            <a href="#home" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-full border border-[#C8A96A]/30 flex items-center justify-center bg-white/5 group-hover:border-[#C8A96A]/60 transition-colors">
-                <span className="font-playfair text-[#C8A96A] font-bold text-lg">U</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-playfair text-xl tracking-[4px] font-bold text-white uppercase group-hover:text-glow-gold transition-all">
-                  UNIK
-                </span>
-                <span className="font-inter text-[8px] tracking-[3px] text-[#C8A96A] uppercase -mt-1">
-                  CAR CARE & SPA
-                </span>
-              </div>
+            <a href="#home" className="flex items-center group">
+              <img src={logo} alt="Unik Car Care & Spa" className="h-12 w-auto object-contain" />
             </a>
             <p className="font-inter text-xs sm:text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide max-w-sm mt-2">
               {contactInfo.description}
@@ -81,7 +72,7 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="flex flex-col gap-3.5">
-              {['Home', 'Services', 'Packages', 'Before & After', 'Gallery', 'FAQ', 'Contact'].map((item) => (
+              {['Home', 'Services', 'Packages', 'Before & After', 'Gallery', 'Career', 'FAQ', 'Contact'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace('& ', '').replace(' ', '-')}`}

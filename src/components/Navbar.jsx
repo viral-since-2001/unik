@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -8,6 +9,7 @@ const navItems = [
   { label: 'Packages', href: '#packages' },
   { label: 'Before & After', href: '#before-after' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'Career', href: '#career' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -52,18 +54,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full border border-[#C8A96A]/30 flex items-center justify-center bg-white/5 group-hover:border-[#C8A96A]/60 transition-colors">
-            <span className="font-playfair text-[#C8A96A] font-bold text-lg">U</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-playfair text-xl tracking-[4px] font-bold text-white uppercase group-hover:text-glow-gold transition-all">
-              UNIK
-            </span>
-            <span className="font-inter text-[8px] tracking-[3px] text-[#C8A96A] uppercase -mt-1">
-              CAR CARE & SPA
-            </span>
-          </div>
+        <a href="#home" className="flex items-center group">
+          <img src={logo} alt="Unik Car Care & Spa" className="h-9 md:h-11 w-auto object-contain" />
         </a>
 
         {/* Desktop Menu */}

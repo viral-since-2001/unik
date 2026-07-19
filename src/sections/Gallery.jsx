@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Search } from 'lucide-react';
 import { galleryItems, galleryHeader } from '../data/siteData';
 
-const categories = ['all', 'ceramic', 'ppf', 'suv', 'sedan', 'luxury'];
+const categories = ['all', 'suv', 'sedan', 'luxury'];
 
 export default function Gallery() {
   const [filter, setFilter] = useState('all');
@@ -14,7 +14,7 @@ export default function Gallery() {
     : galleryItems.filter(item => item.category === filter);
 
   return (
-    <section id="gallery" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="gallery" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute bottom-1/4 right-1/4 w-[40vw] h-[40vw] rounded-full bg-white/[0.01] blur-[150px] pointer-events-none" />
 

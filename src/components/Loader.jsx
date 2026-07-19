@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logo from '../assets/images/logo.png';
 
 export default function Loader({ onFinish }) {
   return (
@@ -10,39 +11,15 @@ export default function Loader({ onFinish }) {
       className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0B0B0B]"
     >
       <div className="relative flex flex-col items-center">
-        {/* Animated Gold Crest / Logo */}
+        {/* Animated Logo */}
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
+          initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative flex items-center justify-center w-24 h-24 mb-6 rounded-full border border-luxury-gold/20"
+          className="mb-4"
         >
-          <div className="absolute inset-0 rounded-full border border-luxury-gold/40 animate-pulse-slow"></div>
-          {/* Custom Luxury U Monogram */}
-          <span className="font-playfair text-4xl font-bold tracking-widest text-[#C8A96A] text-glow-gold">
-            U
-          </span>
+          <img src={logo} alt="Unik Car Care & Spa" className="h-20 md:h-24 w-auto object-contain" />
         </motion.div>
-
-        {/* Brand Name Text Animation */}
-        <motion.h1
-          initial={{ letterSpacing: "15px", opacity: 0 }}
-          animate={{ letterSpacing: "6px", opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-          className="font-playfair text-3xl md:text-4xl font-bold tracking-[8px] text-white text-center uppercase"
-        >
-          UNIK
-        </motion.h1>
-        
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-          className="font-inter text-xs tracking-[4px] text-[#C8A96A] uppercase mt-2"
-        >
-          CAR CARE & SPA
-        </motion.p>
 
         {/* Loading Progress Bar */}
         <div className="w-40 h-[1px] bg-white/10 mt-8 overflow-hidden rounded">

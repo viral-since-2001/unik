@@ -9,7 +9,7 @@ export default function Comparison() {
   const activePackage = comparisons.find((pkg) => pkg.id === activeTab);
 
   return (
-    <section id="comparison" className="relative py-16 md:py-24 bg-[#0B0B0B] overflow-hidden">
+    <section id="comparison" className="relative py-16 md:py-24 bg-[#151515] overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute top-1/3 right-1/4 w-[40vw] h-[40vw] rounded-full bg-[#C8A96A]/5 blur-[120px] pointer-events-none" />
 
