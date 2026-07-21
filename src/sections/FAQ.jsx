@@ -32,12 +32,14 @@ export default function FAQ() {
         </div>
 
         {/* Accordions Container */}
-        <div className="space-y-4">
+        <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
           {faqs.map((faq, idx) => {
             const isOpen = activeIndex === idx;
             return (
               <div
                 key={idx}
+                itemScope
+                itemType="https://schema.org/Question"
                 className={`glass-card rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen ? 'border-[#C8A96A]/40 bg-white/[0.03]' : 'border-white/5 hover:border-white/10'
                 }`}
@@ -48,7 +50,10 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-0 group"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-playfair text-base sm:text-lg font-semibold text-white tracking-wide group-hover:text-[#C8A96A] transition-colors">
+                  <span
+                    className="font-playfair text-base sm:text-lg font-semibold text-white tracking-wide group-hover:text-[#C8A96A] transition-colors"
+                    itemProp="name"
+                  >
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white shrink-0 group-hover:border-[#C8A96A]/50 transition-all duration-300 ${
@@ -66,9 +71,12 @@ export default function FAQ() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      itemScope
+                      itemType="https://schema.org/Answer"
+                      itemProp="acceptedAnswer"
                     >
                       <div className="px-6 pb-6 pt-2 border-t border-white/5">
-                        <p className="font-inter text-xs sm:text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide">
+                        <p className="font-inter text-xs sm:text-sm text-[#B8B8B8] font-light leading-relaxed tracking-wide" itemProp="text">
                           {faq.answer}
                         </p>
                       </div>

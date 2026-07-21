@@ -70,7 +70,7 @@ export default function Gallery() {
                 {/* Image */}
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} — Unik Car Care & Spa gallery, Ahmedabad`}
                   loading="lazy"
                   className="w-full h-auto object-cover group-hover:scale-[1.03] transition-all duration-700 ease-out"
                 />

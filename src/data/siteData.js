@@ -120,8 +120,8 @@ export const founderHeader = {
 };
 
 export const founderContent = {
-  name: "Nikunj Patel",
-  role: "Founder & Master Detailer",
+  name: "Er. Nikunj Patel",
+  role: "Expertise in the Auto Industry",
   initials: "NP",
   bio: "Nikunj founded Unik Car Care & Spa in 2019 with a single bay in Hathijan and an obsession with getting every panel, vent, and stitch of leather absolutely right. What began as a one-man operation has grown into Ahmedabad's trusted detailing studio, having personally overseen the care of over 1,500 vehicles ranging from daily hatchbacks to Range Rovers and BMWs. He still inspects every car before it leaves the bay.",
   quote: "Every car that rolls out of our bay should look better than the day it was bought. That's not a tagline, it's how we check our own work.",

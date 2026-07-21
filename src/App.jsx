@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import WhatsAppCTA from './components/WhatsAppCTA';
 import StickyMobileBook from './components/StickyMobileBook';
 import Navbar from './components/Navbar';
+import StructuredData from './components/StructuredData';
 
 // Page Sections
 import Hero from './sections/Hero';
@@ -32,6 +33,9 @@ export default function App() {
 
   return (
     <>
+      {/* JSON-LD Structured Data — injected into <head> for SEO */}
+      <StructuredData />
+
       {/* Intro Loader Animation Screen */}
       <AnimatePresence>
         {loading && <Loader onFinish={() => setLoading(false)} />}
