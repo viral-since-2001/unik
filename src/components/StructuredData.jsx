@@ -165,11 +165,6 @@ export default function StructuredData() {
         "@type": "Organization",
         "name": "Unik Car Care & Spa",
         "url": "https://unikcarcare.in"
-      },
-      "foundedOrganization": {
-        "@type": "LocalBusiness",
-        "name": "Unik Car Care & Spa",
-        "foundingDate": "2019"
       }
     };
 
