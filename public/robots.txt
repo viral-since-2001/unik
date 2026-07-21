@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://unikcarcare.in/sitemap.xml
+LLMs: https://unikcarcare.in/llms.txt

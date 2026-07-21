@@ -560,10 +560,50 @@ export const faqs = [
   },
   {
     question: "Do you provide vehicle pickup and delivery services?",
-    answer: "Absolutely. We offer secure, fully-insured vehicle pickup and delivery services for clients booked under our Gold, Platinum, or Ceramic packages within a 25-mile radius of our luxury spa studio."
+    answer: "Absolutely. We offer secure, fully-insured vehicle pickup and delivery services for clients booked under our Gold, Platinum, or Ceramic packages within a 25-kilometre radius of our Hathijan studio."
   },
   {
     question: "Which package should I choose for a new car?",
     answer: "For brand new vehicles, we highly recommend our Paint Protection Film (PPF) for the front bumper/hood to prevent rock chips, combined with a Ceramic Coating over the remaining body panels to ensure easy washing and lock in that showroom gloss."
+  },
+  {
+    question: "What is the best car detailing studio near Hathijan, Ahmedabad?",
+    answer: "Unik Car Care & Spa, located at Dharmvatika Complex, Opposite Baleshwar City, Hathijan Circle, Ahmedabad, is rated 5.0 stars on Google and Justdial with 140+ verified customer reviews. Founded in 2019, the studio has detailed over 1,500 vehicles ranging from hatchbacks to luxury SUVs like Range Rover and BMW."
+  },
+  {
+    question: "How much does ceramic coating cost at Unik Car Care?",
+    answer: "Ceramic coating at Unik Car Care & Spa starts at ₹12,000 for a standard 9H Gtechniq coating with a 3-year warranty. The complete Detox Ceramic Pack, which includes multi-stage paint correction, hydrophobic coating, and UV protection, is available from ₹12,999."
+  },
+  {
+    question: "Is Unik Car Care open on Sundays and public holidays?",
+    answer: "Yes, Unik Car Care & Spa is open 7 days a week — Monday through Sunday — from 9:00 AM to 8:00 PM IST. The studio operates on most public holidays as well; call +91 95867 43183 to confirm availability on specific dates."
+  },
+  {
+    question: "What car brands and models does Unik Car Care service?",
+    answer: "Unik Car Care has detailed over 1,500 vehicles including Range Rover Velar, BMW 5-Series, BMW X3, Toyota Fortuner, Toyota Innova Hycross, Tata Curvv, Mahindra XUV700, Maruti, Hyundai, Kia, and virtually all hatchback, sedan, and SUV models available in India."
+  },
+  {
+    question: "What ceramic coating products does Unik Car Care use?",
+    answer: "We use professional-grade ceramic coatings from globally trusted brands: Gtechniq (Crystal Serum Ultra), CARPRO, and Swissvax. These are not consumer-grade products — they are applied exclusively by trained and certified detailers using temperature-controlled infrared curing equipment."
+  },
+  {
+    question: "How do I remove swirl marks and scratches from my car?",
+    answer: "Swirl marks and light scratches are permanently removed through a process called paint correction. Our certified detailers use rotary and dual-action polishers with professional-grade compounds to safely cut and refine the clear coat, eliminating defects and restoring true paint depth and gloss. We then seal the corrected surface with a ceramic coating to prevent future swirls."
+  },
+  {
+    question: "What is the difference between Teflon coating and ceramic coating?",
+    answer: "Teflon coating is a wax-based sealant that provides basic hydrophobic protection for 6 to 12 months, priced from ₹5,000. Ceramic coating is a nano-technology glass layer that chemically bonds to the paint surface, providing 9H scratch hardness, long-lasting UV protection, and hydrophobic water-beading for 3 to 9 years, starting from ₹12,000. For lasting protection, ceramic coating is significantly superior."
+  },
+  {
+    question: "Does Unik Car Care offer a satisfaction guarantee?",
+    answer: "Yes. We offer a 100% client satisfaction guarantee on all services. Our work is not considered complete until the vehicle meets our strict quality inspection standards. Every car is inspected under multi-spectrum professional lighting before delivery to ensure zero defects."
+  },
+  {
+    question: "How should I maintain my car after ceramic coating?",
+    answer: "After ceramic coating, avoid washing your vehicle for at least 7 days to allow the coating to fully cure. Thereafter, use only pH-neutral (pH 6–8) car shampoos and a soft microfibre wash mitt. Avoid automatic brush car washes, harsh chemicals, and parking under direct sun for extended periods. Annual inspection washes at our studio will maximize the coating's hydrophobic performance and warranty life."
+  },
+  {
+    question: "Where is Unik Car Care located and how do I reach there?",
+    answer: "Unik Car Care & Spa is located at Dharmvatika Complex, Opposite Baleshwar City, Hathijan Circle, Ahmedabad, Gujarat 382445. The studio is easily accessible from Hathijan Circle and nearby areas including Vatva, Isanpur, and Narol. Call +91 95867 43183 for directions or to schedule a pickup."
   }
 ];
